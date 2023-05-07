@@ -1,4 +1,6 @@
 <script setup lang="ts">
+const arr = [1,2,3]
+console.log(arr.at(-1))
 </script>
 
 <template>

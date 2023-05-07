@@ -7,15 +7,13 @@ import path from 'path'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
-    UnoCSS({}),
+    UnoCSS(),
     vue(),
     legacy({
       targets:
-        'defaults and not dead, chrome >= 87, edge >= 88, firefox >= 78, safari >= 14',
-      renderLegacyChunks: true,
-      additionalLegacyPolyfills: ['regenerator-runtime/runtime'],
-      polyfills: true,
+        'defaults, chrome >= 73, edge >= 79, firefox >= 64, safari >= 13',
       modernPolyfills: true,
+      renderLegacyChunks: false,
     }),
   ],
   resolve: {
